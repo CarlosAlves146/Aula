@@ -1,0 +1,491 @@
+/*Variaveis globais*/
+:root{
+    --primary-color: #511B01;
+    --white-color: #ffff;
+    --ligth-gray-color: #EEEE;
+    --secundary-color: black; 
+    --gap: 30px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+*/
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;/*Faz com que a rolagem do scroll seja suave*/
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    color: var(--primary-color);
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Montserrat', sans-serif;
+}
+h1{
+    font-size: 6rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+}
+h2{
+    font-size: 5.5rem;
+    text-transform: uppercase;
+}
+h3{
+    font-size: 5rem;
+}
+h4{
+    font-size: 4.5rem;
+}
+h5{
+    font-size: 4rem;
+}
+h6{
+    font-size: 3.5rem;
+}
+
+.main-bg{
+    background-image: url('../img/main-bg.svg');
+    background-size: cover;/*deixa o bg full-screen*/
+    background-position: center 0 center; 
+    color: var(--white-color);
+}
+.white-bg{
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+
+.main-content{
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: var(--gap);
+}
+
+.section{
+    min-height: 100vh;
+    width: 100%;
+}
+
+.menu{
+    background: rgb(255, 255, 255);
+    position: fixed;/*Faz com que o menu role junto com a pagina*/
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-bottom: 0.1rem solid var(--ligth-gray-color);  
+    z-index: 1;  
+}
+.menu-content{/*para separar o logo do restante do menu*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.menu h1{
+    font-size: 2.3rem;
+    color: var(--primary-color);
+}
+.menu h1 a{
+    color: inherit; /*Comando para herdar a cor do seu pai no caso o h1 que contem a variavel primary color*/
+    text-decoration: none;
+}
+.menu ul{
+    list-style: none; /*para tirar as bolinhas do li*/
+    display: flex;
+}
+.menu ul li a{
+   display: block;
+   text-decoration: none;
+   padding: 2rem;
+   font-size: 1.8rem;
+   font-family: 'Montserrat', sans-serif;
+   color: var(--primary-color);
+   margin: 1rem;
+   position: relative; /*position relative só add para o efeito da linha ficasse somente na palavra*/
+}
+.menu-spacing{
+    height: 65px;
+}
+
+.menu ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: 1.6rem;
+    left: 15%;
+    width: 10px;
+    height: 0.2rem;
+    background: var(--secundary-color);
+    transition: all 300ms ease-in-out;    
+ }
+ .menu ul li a:hover::after{
+   width: 60%;
+   left: 25%;
+ }
+
+.intro-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
+    min-height: 100vh;
+    max-width: 80%;
+}
+.top3-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
+    min-height: 100vh;
+    max-width: 80%;   
+}
+
+.intro-text-content, .intro-img, .top-dificuldades, .intro-img-dificuldade{
+    display: flex;
+    flex-flow: column wrap; /*flex-flow: column wrap;, isso significa que os itens flexíveis serão organizados em colunas, empilhando-se verticalmente. Se o espaço disponível não for suficiente para todos os itens em uma única coluna, eles serão quebrados para a próxima coluna.*/
+    justify-content: center;
+}
+.intro-text-content h2{
+    font-size: 10rem;
+}
+.intro-text-content p{
+    font-size: 3rem;
+}
+.top-dificuldades h2{   
+    font-size: 9rem;
+}
+.top-dificuldades p{
+    font-size: 3rem;
+}
+
+.intro-img img{
+    max-width: 100%;
+    height: auto;
+}
+.intro-img-dificuldade img{
+    max-width: 100%;
+    height: auto;
+}
+.top-dificulades h2{
+    display: flex;
+    justify-content: center;
+}
+.top-dificuldades p{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+/*
+.grid-one{
+    display: flex;
+    flex-flow: column wrap;  
+    width: 100%;
+}*/
+.grid-one-content{
+    display: flex;
+    flex-flow: column nowrap; 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 80%;
+    min-height: 100vh;
+    padding-top: 262px;
+}
+.grid-galery-content{
+    display: flex;
+    flex-flow: column nowrap; 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 80%;
+    min-height: 100vh;
+    padding-top: 102px;
+}
+.grid-main-heading{
+    margin-bottom: 1rem;
+    gap: var(--gap);
+}
+.grid-drescription{
+    padding-bottom: 5rem;
+    font-size: 2.5rem;
+}
+    
+.grid-section-tree{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    counter-reset: grid-counter;
+    margin: 0 auto;
+    min-height: 100vh;
+
+}
+
+.grid-section-tree h3{
+    font-size: 3rem;
+    position: relative;
+    padding-left: 5rem;
+    padding-bottom: 3rem;
+}
+.grid-section-tree h3::before{
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
+    position: absolute;
+    font-size: 8rem;
+    font-style: italic;
+    left: -2rem;
+    top: -3rem;
+    transform: rotate(5deg);
+}
+.grid-section-tree article p{
+    font-size: 3rem;
+}
+.grid-img {
+    display: grid;
+    width: 80%;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--gap);
+    justify-items: center;
+    margin: 0 auto;
+    min-height: 80vh;
+  }
+.gallery-img{
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;/*Quando aplicada a um elemento, ela oculta o conteúdo que ultrapassa os limites desse elemento, ou seja, qualquer parte do conteúdo que esteja fora das dimensões especificadas para esse elemento será cortada e não será visível.*/
+}
+/*
+.gallery-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+*/
+.gallery-img img{
+    transition: all 300ms ease-in-out;
+}
+.gallery-img img:hover{
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+}
+.pricing{
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.pricing h2{
+    gap: var(--gap);
+}
+.pricing p{
+    font-size: 2rem; 
+}
+table{
+    min-width: 360px;
+    width: 100%;
+    border-collapse: collapse;/* Serve para fazer com que as bordas da tabelas se juntem entre elas*/
+}
+.responsive{
+    padding-top: 5rem;
+}
+
+table td, table th{
+    padding: 0.5rem;
+    text-align: left;
+    border: 0.1rem solid var(--ligth-gray-color);
+}
+
+tfoot td{
+    background: var(--ligth-gray-color);
+}
+thead th{
+    background: var(--ligth-gray-color);
+}
+table caption{
+    font-style: italic;
+    font-size: 1.6rem;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.reponsive{
+    width: 100%;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+.grid-contact-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
+    min-height: 100vh;
+    max-width: 80%;
+}
+.text-contact h2{
+    display: flex;
+    justify-content: center;
+    font-size: 5rem;
+    margin-top: 6rem;
+}
+.text-contact p{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.contact-form{
+    grid-column: span 2; /*Faz com que a classe ocupe duas colunas da grid*/
+}
+
+.contact-form .form-grid-content{
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.form-group{
+    flex: 1 1 320px;/*A propriedade flex é uma maneira abreviada de definir três propriedades do modelo flexível em CSS: flex-grow, flex-shrink e flex-basis.*/
+}
+
+.form-group label{
+    display: block;
+}
+
+.form-group input, .form-group textarea{
+    margin-bottom: -3rem;
+    border: none;
+    background: var(--white-color);
+    padding: 1.0rem 1rem; /*Colocando dois valores ele vai aplicar o 1para cima e baixo e o segundo valor para os lados direito e esquerdo*/
+    width: 100%;
+    font-size: 2rem;
+}
+
+.full-width{
+    width: 100%;
+    flex: 1 1 100%;
+}
+.form-group button{
+    font-style: italic;
+    border: 0.1rem solid var(--white-color);
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 1.5rem 2rem;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.form-group button:hover {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(233, 229, 229, 20); /* Adiciona uma sombra */
+    border-radius: 2rem;
+  }
+
+.form-group ::placeholder{ /*Tudo que tiver place holder dentro de form-group vai receber esse color com essa transparencia*/
+    color: rgba(83, 81, 81, 0.253);
+}
+.form-grid-content legend{
+    font-style: italic;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.form-group input:focus, 
+.form-group textarea:focus{
+    box-shadow: 0 0 15px 2px var(--white-color);
+}
+.form-grid-content label{
+    padding-bottom: 1rem;
+}
+
+
+.footer{
+    padding: 10px 10px;
+    text-align: center;
+    font-style: italic;
+}
+.footer span{
+    color: red;
+}
+
+.close-menu{
+    display: none;
+}
+
+
+@media (max-width: 800px){
+    .intro-content, 
+    .top3-content, 
+    .grid-section-tree, 
+    .grid-img, 
+    .grid-section-tree, 
+    .grid-contact-form {
+        grid-template-columns: 1fr;
+    }
+    .gallery-img img {
+        width: 100%;
+    }
+    .menu {
+        height: 100vh;
+        position: fixed;/*Faz com que o menu role junto com a pagina*/
+        text-align: center;
+        display: none;
+
+    }
+    .menu-content{/*para separar o logo do restante do menu*/
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;      
+    }
+    .menu-content ul{/*para separar o logo do restante do menu*/
+        flex-direction: column;
+    }
+    .close-menu-label::after{
+        content: '☰'; /*☰ conhecido como Hamburger icon*/
+        position: fixed;
+        z-index: 2;
+        top: 1rem;
+        right: 1rem;
+        background: var(--primary-color);
+        color: var(--white-color);
+        font-size: 3rem;
+        line-height: 3rem;/*define a altura da linha dentro de um elemento*/
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+    /*✕*/
+    .close-menu:checked~.menu{
+        display: block;
+    }
+    .close-menu:checked~.close-menu-label::after{
+        content: '✕'
+    }
+    .back-to-top{
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        background: var(--white-color);
+        width: 5rem;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        text-decoration: none;
+        font-size: 3rem;
+        border: 0.1rem solid var(--primary-color);
+    }
+}
