@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="main-bg">
+    <!--Inicio do Menu______________________________________________________-->
+    <input id="close-menu" 
+            class="close-menu" 
+            type="checkbox" 
+            aria-label="Close menu" 
+            role="button">
+            <!-- aria-label fornecer uma descrição acessível para usuários com deficiência visual e role está especificando a função do elemento na página, ambos são acessibilidade -->
+    <label class="close-menu-label" for="close-menu" title="close menu"></label>
+    <!--title="close menu" fornece um título para o rótulo, que pode ser útil para acessibilidade ou para fornecer uma dica sobre a função do rótulo.-->
+
+        <aside class="menu">
+            <div class="main-content menu-content">
+                <h1>
+                    <a onclick="getElementById ('close-menu').checked = false;" href="#intro">logo</a>
+                </h1>
+
+                <nav>
+                    <ul onclick="getElementById ('close-menu').checked = false;" class="menu-content-direita">
+                        <li><a href="#top3">top 3</a></li>
+                        <li><a href="#dificuldades">dificuldades</a></li>
+                        <li><a href="#gallery">galeria</a></li>
+                        <li><a href="#precing">trabalho</a></li>
+                        <li><a href="#contato">contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+    <!--Termino do Menu______________________________________________________-->
+    
+<div class="menu-spacing"></div><!--Esse Espaço foi criado parao inicio da section ñ fica abaixo do menu-->
+
+    <section id="intro" class="intro main-bg section">
+
+        <div class="main-content intro-content"><!--Essa div foi criada para alinhar o texto a esquerda utilizando a class intro-content que é uma grid-->
+            
+            <div class="intro-text-content"><!--Dentro desta div irei coloca um class com display flex, percebar que essa div já está dentro de uma grid-->
+                <h2>essa é a minha primeira página!!!</h2>
+                <p>Durante a criação de uma página, nos deparamos com a complexidade dos códigos, mas também com a possibilidade de superá-la. Vamos concluir essa página com determinação, ajustando cada detalhe para proporcionar uma experiência sólida e agradável.</p>
+            </div>
+
+            <div class="intro-img">
+                <img src="assets/img/javascript.svg" alt="Desenho de dois homens e uma mulher segunrano logos, do java script, do html5, e o CSS.">
+            </div>
+
+        </div>
+        
+    </section>
+
+    <section id="top3" class="white-bg section">
+
+        <div class="main-content top3-content">
+            <div class="top-dificuldades">
+
+                <h2>Top 3 Dificulades</h2>
+                <p><strong>Abstração de conceitos:</strong> Compreender conceitos abstratos, como lógica de programação e estruturas de dados, pode ser desafiador para iniciantes.</p>
+                <p><strong>Resolução de problemas:</strong> Enfrentar problemas complexos e aprender a desenvolver soluções eficientes demanda prática e habilidades de resolução de problemas.</p>
+                <p><strong>Curva de aprendizado inicial:</strong> O início pode ser intimidante, pois há muitos aspectos a absorver, desde a sintaxe de uma linguagem até a compreensão de paradigmas de programação.
+                </p>
+            </div>
+            <div class="intro-img-dificuldade">
+                <img src="assets/img/img-dificuldade.png" alt="Imagem de um computador sobre a mesa com varios acessorios de escritorio, alusão ao trabalho para aprender a programar">
+            </div>
+        </div>
+    </section>
+
+    <section id="dificuldades" class="grid-one main-bg section">
+        <div class="main-content grid-one-content">
+            <h2 class="grid-main-heading">DIFICULADES</h2>
+            <p class="grid-drescription">Sub titulo</p>           
+            <div class="grid-section-tree">
+                <article>                
+                    <h3>Dificuldade</h3>
+                    <p><strong>Abstração de conceitos:</strong><br> Compreender conceitos abstratos, como lógica de programação e estruturas de dados, pode ser desafiador para iniciantes.</p>
+                </article>
+                <article>                
+                    <h3>Dificuldade</h3>
+                    <p><strong>Resolução de problemas:</strong><br> Enfrentar problemas complexos e aprender a desenvolver soluções eficientes demanda prática e habilidades de resolução de problemas.</p>
+                </article>
+                <article>
+                    <h3>Dificuldade</h3>
+                    <p><strong>Curva de aprendizado inicial:</strong><br> O início pode ser intimidante, pois há muitos aspectos a absorver, desde a sintaxe de uma linguagem até a compreensão de paradigmas de programação.
+                    </p>                    
+                </article>                            
+            </div>
+        </div>       
+    </section>
+
+    <section id="gallery" class="white-bg section grid-one">
+        <div class="grid-galery-content main-content">
+            <div>
+                <h3 class="grid-main-heading">GALERIA</h3>
+                <p class="grid-drescription">Teste</p>
+            </div>
+            <div class="grid-img">
+                <div class="gallery-img">
+                    <img src="https://source.unsplash.com/random/360x360?r=1" alt="galeria">
+                </div>
+                <div class="gallery-img">
+                    <img src="https://source.unsplash.com/random/360x360?r=2" alt="galeria">
+                </div>
+                <div class="gallery-img">
+                    <img src="https://source.unsplash.com/random/360x360?r=3" alt="galeria">
+                </div>
+                <div class="gallery-img">
+                    <img src="https://source.unsplash.com/random/360x360?r=4" alt="galeria">
+                </div>
+                <div class="gallery-img">
+                    <img src="https://source.unsplash.com/random/360x360?r=5" alt="galeria">
+                </div>
+                <div class="gallery-img">
+                    <img src="https://source.unsplash.com/random/360x360?r=6" alt="galeria">             
+                </div>
+                <div class="gallery-img">
+                    <img src="https://source.unsplash.com/random/360x360?r=7" alt="galeria">             
+                </div>
+                <div class="gallery-img">
+                    <img src="https://source.unsplash.com/random/360x360?r=8" alt="galeria">             
+                </div>       
+            </div>
+        </div>
+    </section>
+    <section id="dificuldades" class="grid-one main-bg section">
+        <div class="main-content grid-one-content">
+            <h2 class="grid-main-heading">DIFICULADES</h2>
+            <p class="grid-drescription">Sub titulo</p>           
+            <div class="grid-section-tree">
+                <article>                
+                    <h3>Dificuldade</h3>
+                    <p><strong>Abstração de conceitos:</strong><br> Compreender conceitos abstratos, como lógica de programação e estruturas de dados, pode ser desafiador para iniciantes.</p>
+                </article>
+                <article>                
+                    <h3>Dificuldade</h3>
+                    <p><strong>Resolução de problemas:</strong><br> Enfrentar problemas complexos e aprender a desenvolver soluções eficientes demanda prática e habilidades de resolução de problemas.</p>
+                </article>
+                <article>
+                    <h3>Dificuldade</h3>
+                    <p><strong>Curva de aprendizado inicial:</strong><br> O início pode ser intimidante, pois há muitos aspectos a absorver, desde a sintaxe de uma linguagem até a compreensão de paradigmas de programação.
+                    </p>                    
+                </article>                            
+            </div>
+        </div>       
+    </section>
+
+    
+
+    <section id="precing" class="white-bg section">
+
+        <div class="main-content">
+            <div class="pricing">
+
+                <h2>Pricing</h2>
+                <p><strong>Abstração de conceitos:</strong> Compreender conceitos abstratos, como lógica de programação e estruturas de dados, pode ser desafiador para iniciantes.</p>
+                <p><strong>Resolução de problemas:</strong> Enfrentar problemas complexos e aprender a desenvolver soluções eficientes demanda prática e habilidades de resolução de problemas.</p>
+
+                <div class="responsive">
+                    <table class="table">
+                        <caption>Pricing Table</caption>
+                        <thead>
+                            <tr>
+                                <th>Title 1</th>
+                                <th>Title 2</th>
+                                <th>Title 3</th>
+                                <th>Title 4</th>
+                                <th>Title 5</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Content 1</td>
+                                <td>Content 1</td>
+                                <td>Content 1</td>
+                                <td>Content 1</td>
+                                <td>Content 1</td>
+                            </tr>
+                            <tr>
+                                <td>Content 1</td>
+                                <td>Content 1</td>
+                                <td>Content 1</td>
+                                <td>Content 1</td>
+                                <td>Content 1</td>
+                            </tr>
+                            <tr>
+                                <td>Content 1</td>
+                                <td>Content 1</td>
+                                <td>Content 1</td>
+                                <td>Content 1</td>
+                                <td>Content 1</td>
+                            </tr>
+                            <tr>
+                                <td>Content 1</td>
+                                <td>Content 1</td>
+                                <td>Content 1</td>
+                                <td>Content 1</td>
+                                <td>Content 1</td>
+                            </tr>
+                            <tr>
+                                <td>Content 1</td>
+                                <td>Content 1</td>
+                                <td>Content 1</td>
+                                <td>Content 1</td>
+                                <td>Content 1</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Testando</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        
+        </div>
+    </section>
+
+    <section id="contato" class="main-bg section">
+
+        <div class="main-content grid-contact-form">
+            <div class="text-contact">
+                <h2>Top 3 Dificulades</h2>
+                <p><strong>Abstração de conceitos:</strong> Compreender conceitos abstratos, como lógica de programação e estruturas de dados, pode ser desafiador para iniciantes.</p>
+                <p><strong>Resolução de problemas:</strong> Enfrentar problemas complexos e aprender a desenvolver soluções eficientes demanda prática e habilidades de resolução de problemas.</p>
+                <p><strong>Curva de aprendizado inicial:</strong> O início pode ser intimidante, pois há muitos aspectos a absorver, desde a sintaxe de uma linguagem até a compreensão de paradigmas de programação.
+                </p>
+            </div>
+            <div class="intro-img-dificuldade">
+                <img src="assets/img/contactc.svg" alt="Imagem simulando contato">
+            </div>
+
+            <div class="contact-form">
+                <fieldset class="form-grid-content">
+                    <legend>Contact my</legend>
+                    <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" name="First-name" id="first-name" placeholder="Insira seu nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" name="last-name" id="last-name" placeholder="Sobrenome">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email" placeholder="email@email.com">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Insira o texto"></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <button type="Summit">Send message</button>
+                    </div>
+                
+                </fieldset>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="white-bg footer">
+        <p><a href=" ">Feito com <span class="heart">❤</span> Carlos Henrique</a> </p>
+    </footer>
+
+    <a class="back-to-top" href="#">🡹</a>  
+
+    
+    
+    
+
+
+ 
+</body>
+</html>
